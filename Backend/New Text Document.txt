@@ -1,0 +1,8 @@
+var links = document.getElementsByClassName("myLink");
+var URL = window.location.pathname;
+URL = URL.substring(URL.lastIndexOf('/'));
+for (var i = 0; i < links.length; i++) {
+  if (links[i].dataset.pathname == URL) {
+    links[i].classList.add("active");
+  }
+}
